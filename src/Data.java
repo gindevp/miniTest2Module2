@@ -1,6 +1,6 @@
-import Util.Staff;
-import Util.StaffFullTime;
-import Util.StaffPartTime;
+import entity.Staff;
+import entity.StaffFullTime;
+import entity.StaffPartTime;
 
 public class Data {
     //Trả về mảng data gồm cả 2 loại

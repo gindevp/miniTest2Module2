@@ -1,8 +1,4 @@
-import Util.Staff;
-import Util.StaffFullTime;
-import Util.StaffPartTime;
-
-import java.util.Scanner;
+import util.ShowStaffFT;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,12 +17,12 @@ public class Main {
 //        }
 
         //thực thi chương trình
-        Sevirce.listSalaryUnderAvg();
-        System.out.println("\nTong luong nhan vien partime trong cty:" + Sevirce.sumNetWage(Data.dataArr()));
+        ShowStaffFT.listSalaryUnderAvg();
+        System.out.println("\nTong luong nhan vien partime trong cty:" + ShowStaffFT.sumNetWage(Data.dataArr()));
         System.out.println("\nMang staff ban đầu :");
-        Sevirce.listStaffFullTime(Data.dataArr());
+        ShowStaffFT.listStaffFullTime(Data.dataArr());
         System.out.println("\nsắp xep tang dan :");
-        Sevirce.listSort(Data.dataArr());
+        ShowStaffFT.listSort(Data.dataArr());
     }
 //    public static void addStaffPastTime(Staff[] arr){
 //        Scanner scanner= new Scanner(System.in);

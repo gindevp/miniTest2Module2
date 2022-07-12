@@ -1,6 +1,4 @@
-package Util;
-
-import Util.Staff;
+package entity;
 
 public class StaffFullTime extends Staff {
     private int bonus;

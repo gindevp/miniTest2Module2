@@ -1,4 +1,4 @@
-package Util;
+package entity;
 
 public abstract class  Staff {
        private int staffId;
