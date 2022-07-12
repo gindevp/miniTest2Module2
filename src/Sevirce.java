@@ -3,6 +3,7 @@ import Util.StaffFullTime;
 import Util.StaffPartTime;
 
 public class Sevirce {
+//Hàm trả về mảng có Salary < trung binh
     public static Staff[] outSalaryUnderAvg(Staff[] arr, int avg) {
         int count = 0;
         int j = 0;
@@ -28,13 +29,13 @@ public class Sevirce {
         }
         return arrSalaryUnderAvg;
     }
-
+//Tinh trung binh salary
     public static int avgSalary(Staff[] arr) {
         int avgSalary;
         avgSalary = sumTotalCompany(arr) / arr.length;
         return avgSalary;
     }
-
+//in ra salary < trung binh
     public static void listSalaryUnderAvg() {
         System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(Data.dataArr()) + "\n");
         for (Staff x : outSalaryUnderAvg(Data.dataArr(), avgSalary(Data.dataArr()))
@@ -43,13 +44,13 @@ public class Sevirce {
             System.out.println(y.toString());
         }
     }
-
+//tinh tong lương toàn cong ty
     public static int sumTotalCompany(Staff[] arr) {
         int sum;
         sum = sumSalary(arr) + sumNetWage(arr);
         return sum;
     }
-
+//tinh tong lương partime
     public static int sumNetWage(Staff[] arr) {
         int sum = 0;
         for (Staff x : arr
@@ -61,7 +62,7 @@ public class Sevirce {
         }
         return sum;
     }
-
+//tinh tong lương fulltime
     public static int sumSalary(Staff[] arr) {
         int sum = 0;
         for (Staff x : arr
@@ -73,7 +74,7 @@ public class Sevirce {
         }
         return sum;
     }
-
+//Trả về mảng đã sắp xếp tăng dần
     public static Staff[] sort(Staff[] arr) {
         Staff[] newStaff=arrStaffFullTime(arr);
         for (int i = 0; i < newStaff.length - 1; i++) {
@@ -89,7 +90,7 @@ public class Sevirce {
         }
         return newStaff;
     }
-
+//In ra mảng đã sắp xếp
     public static void listSort(Staff[] arr) {
         for (Staff x : sort(arr)
         ) {
@@ -101,6 +102,7 @@ public class Sevirce {
         }
 
     }
+    //Trả về mảng full time
     public static Staff[] arrStaffFullTime(Staff[] arr){
         int count = 0;
         int countJ = 0;
@@ -121,6 +123,7 @@ public class Sevirce {
         }
         return newStaff;
     }
+    //In ra full time
     public static void listStaffFullTime(Staff[] arr){
         for (Staff x: arr
              ) {
@@ -131,4 +134,5 @@ public class Sevirce {
 
         }
     }
+
 }

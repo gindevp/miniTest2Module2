@@ -3,6 +3,7 @@ import Util.StaffFullTime;
 import Util.StaffPartTime;
 
 public class Data {
+    //Trả về mảng data gồm cả 2 loại
     public static Staff[] dataArr() {
         Staff staff1 = new StaffPartTime(1, "quyet", 21, 929922929, "quyet@ham", 9);
         Staff staff2 = new StaffPartTime(2, "hieu", 21, 929922929, "quyet@ham", 10);
