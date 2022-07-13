@@ -7,6 +7,7 @@ import javax.xml.crypto.Data;
 
 
 public class SalaryUderAvg {
+    static Staff [] dataStaff= data.Data.dataArr();
     //Hàm trả về mảng có Salary < trung binh
     public static Staff[] outSalaryUnderAvg(Staff[] arr, int avg) {
         int count = 0;
@@ -41,8 +42,9 @@ public class SalaryUderAvg {
     }
     //in ra salary < trung binh
     public static void listSalaryUnderAvg() {
-        System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(data.Data.dataArr()) + "\n");
-        for (Staff x : outSalaryUnderAvg(data.Data.dataArr(), avgSalary(data.Data.dataArr()))
+
+        System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(dataStaff) + "\n");
+        for (Staff x : outSalaryUnderAvg(dataStaff, avgSalary(dataStaff))
         ) {
             StaffFullTime y = (StaffFullTime) x;
             System.out.println(y.toString());

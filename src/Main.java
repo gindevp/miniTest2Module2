@@ -1,7 +1,10 @@
+import entity.Staff;
 import util.ShowStaffFT;
 
 public class Main {
+    static Staff[] dataStaff= data.Data.dataArr();
     public static void main(String[] args) {
+
 //        System.out.println("Thêm mới nhân viên:");
 //        Scanner scanner= new Scanner(System.in);
 //        System.out.println("1: Staff part time\n2: Staff full time");
@@ -18,7 +21,7 @@ public class Main {
 
         //thực thi chương trình
         util.SalaryUderAvg.listSalaryUnderAvg();
-        System.out.println("\nTong luong nhan vien partime trong cty:" + util.Sum.sumNetWage(data.Data.dataArr()));
+        System.out.println("\nTong luong nhan vien partime trong cty:" + util.Sum.sumNetWage(dataStaff));
         System.out.println("\nMang staff ban đầu :");
         ShowStaffFT.listStaffFullTime(data.Data.dataArr());
         System.out.println("\nsắp xep tang dan :");
