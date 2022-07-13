@@ -3,6 +3,8 @@ package util;
 import entity.Staff;
 import entity.StaffFullTime;
 
+import javax.xml.crypto.Data;
+
 
 public class SalaryUderAvg {
     //Hàm trả về mảng có Salary < trung binh
@@ -39,8 +41,8 @@ public class SalaryUderAvg {
     }
     //in ra salary < trung binh
     public static void listSalaryUnderAvg() {
-        System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(Data.dataArr()) + "\n");
-        for (Staff x : outSalaryUnderAvg(Data.dataArr(), avgSalary(Data.dataArr()))
+        System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(data.Data.dataArr()) + "\n");
+        for (Staff x : outSalaryUnderAvg(data.Data.dataArr(), avgSalary(data.Data.dataArr()))
         ) {
             StaffFullTime y = (StaffFullTime) x;
             System.out.println(y.toString());

@@ -17,12 +17,12 @@ public class Main {
 //        }
 
         //thực thi chương trình
-        ShowStaffFT.listSalaryUnderAvg();
-        System.out.println("\nTong luong nhan vien partime trong cty:" + ShowStaffFT.sumNetWage(Data.dataArr()));
+        util.SalaryUderAvg.listSalaryUnderAvg();
+        System.out.println("\nTong luong nhan vien partime trong cty:" + util.Sum.sumNetWage(data.Data.dataArr()));
         System.out.println("\nMang staff ban đầu :");
-        ShowStaffFT.listStaffFullTime(Data.dataArr());
+        ShowStaffFT.listStaffFullTime(data.Data.dataArr());
         System.out.println("\nsắp xep tang dan :");
-        ShowStaffFT.listSort(Data.dataArr());
+        util.Sort.listSort(data.Data.dataArr());
     }
 //    public static void addStaffPastTime(Staff[] arr){
 //        Scanner scanner= new Scanner(System.in);
