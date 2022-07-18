@@ -29,6 +29,11 @@ public class StaffPartTime extends Staff {
     @Override
     public String toString() {
         return "StaffPartTime{" +
+                "staffId=" + this.getStaffId() +
+                ", name='" + this.getName() + '\'' +
+                ", age=" + this.getAge() +
+                ", phoneNumber=" + this.getPhoneNumber() +
+                ", email='" + this.getEmail() + '\'' +
                 "workTime=" + workTime +
                 '}';
     }

@@ -2,52 +2,38 @@ package util;
 
 import entity.Staff;
 import entity.StaffFullTime;
-
-import javax.xml.crypto.Data;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class SalaryUderAvg {
-    static Staff [] dataStaff= data.Data.dataArr();
+    static List<Staff> dataStaff= data.Data.dataArr();
     //Hàm trả về mảng có Salary < trung binh
-    public static Staff[] outSalaryUnderAvg(Staff[] arr, int avg) {
-        int count = 0;
-        int j = 0;
-        for (Staff x : arr
-        ) {
-            if (x instanceof StaffFullTime) {
-                StaffFullTime y = (StaffFullTime) x;
-                if (y.getSalary() < avg) {
-                    count++;
-                }
-            }
-        }
-        Staff[] arrSalaryUnderAvg = new Staff[count];
-        for (Staff staff : arr) {
-            if (staff instanceof StaffFullTime) {
-                StaffFullTime y = (StaffFullTime) staff;
-                if (y.getSalary() < avg) {
+    public static List<Staff> outSalaryUnderAvg(List<Staff> arr, int avg) {
+        List<Staff> arrSalaryUnderAvg = new ArrayList<>();
 
-                    arrSalaryUnderAvg[j] = staff;
-                    j++;
-                }
+        for (Staff staff : arr) {
+            if ((staff instanceof StaffFullTime) && (staff.netWage() < avg)) {
+                    arrSalaryUnderAvg.add(staff);
             }
         }
         return arrSalaryUnderAvg;
     }
     //Tinh trung binh salary
-    public static int avgSalary(Staff[] arr) {
+    public static int avgSalary(List<Staff> arr) {
         int avgSalary;
-        avgSalary = Sum.sumTotalCompany(arr) / arr.length;
+        avgSalary = Sum.sumTotalCompany(arr) / arr.size();
         return avgSalary;
     }
     //in ra salary < trung binh
     public static void listSalaryUnderAvg() {
 
         System.out.println("\nStaff có Salary < trung bình cty: " + avgSalary(dataStaff) + "\n");
-        for (Staff x : outSalaryUnderAvg(dataStaff, avgSalary(dataStaff))
+        for (Staff staff : outSalaryUnderAvg(dataStaff, avgSalary(dataStaff))
         ) {
-            StaffFullTime y = (StaffFullTime) x;
-            System.out.println(y.toString());
+            if(staff instanceof StaffFullTime){
+                System.out.println(staff);
+            }
         }
     }
 }
