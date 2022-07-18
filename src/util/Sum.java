@@ -21,8 +21,7 @@ public class Sum {
         for (Staff x : arr
         ) {
             if (x instanceof StaffPartTime) {
-                StaffPartTime y = (StaffPartTime) x;
-                sum += y.netWage();
+                sum += x.netWage();
             }
         }
         return sum;
